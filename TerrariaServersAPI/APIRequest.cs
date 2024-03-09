@@ -10,7 +10,7 @@
         /// To check if a Steam User or Username has voted or not, and if the vote has been claimed or not. This can be used for a reward plugin. The API will only check for the last 24 hours.
         /// </summary>
         /// <param name="key">Your Server API Key.</param>
-        /// <param name="nameOrId">Return all the votes for the provided nickname/steamid.</param>
+        /// <param name="nameOrId">User name or steam id. Case insensitive.</param>
         /// <param name="url">When using a different URL, you should indicate it (for example, if the creator of your server created the URL so as not to cause a bunch of requests to terraria-server.com)</param>
         /// <returns>A response containing information about the user's vote.</returns>
         /// <exception cref="ArgumentNullException">Called when the argument <paramref name="nameOrId"/> is null.</exception>
@@ -28,7 +28,7 @@
         /// To check if a Steam User or Username has voted or not, and if the vote has been claimed or not. This can be used for a reward plugin. The API will only check for the last 24 hours.
         /// </summary>
         /// <param name="key">Your Server API Key.</param>
-        /// <param name="nameOrId">Return all the votes for the provided nickname/steamid.</param>
+        /// <param name="nameOrId">User name or steam id. Case insensitive.</param>
         /// <param name="identifier"></param>
         /// <param name="url">When using a different URL, you should indicate it (for example, if the creator of your server created the URL so as not to cause a bunch of requests to terraria-server.com)</param>
         /// <returns>A response containing information about the user's vote in JSON format.</returns>
@@ -51,7 +51,7 @@
         /// To set a vote as claimed for a Steam User or Username. This can be used for a reward plugin. The API will only set vote as claimed in the last 24 hours.
         /// </summary>
         /// <param name="key">Your Server API Key.</param>
-        /// <param name="nameOrId">Return all the votes for the provided nickname/steamid.</param>
+        /// <param name="nameOrId">User name or steam id.</param>
         /// <param name="url">When using a different URL, you should indicate it (for example, if the creator of your server created the URL so as not to cause a bunch of requests to terraria-server.com)</param>
         /// <returns>Response containing information about the vote that has been claimed.</returns>
         /// <exception cref="ArgumentNullException">Called when the argument <paramref name="nameOrId"/> is null.</exception>
@@ -69,7 +69,7 @@
         /// To set a vote as claimed for a Steam User or Username. This can be used for a reward plugin. The API will only set vote as claimed in the last 24 hours.
         /// </summary>
         /// <param name="key">Your Server API Key.</param>
-        /// <param name="nameOrId">Return all the votes for the provided nickname/steamid.</param>
+        /// <param name="nameOrId">User name or steam id.</param>
         /// <param name="identifier"></param>
         /// <param name="url">When using a different URL, you should indicate it (for example, if the creator of your server created the URL so as not to cause a bunch of requests to terraria-server.com)</param>
         /// <returns>Response containing information about the vote that has been claimed in JSON format.</returns>
@@ -112,7 +112,7 @@
         /// </summary>
         /// <param name="key">Your Server API Key</param>
         /// <param name="limit">Result limit. Max value is 1000. Default value is 100.</param>
-        /// <param name="nameOrId">Return all the votes for the provided nickname/steamid.</param>
+        /// <param name="nameOrId">User name or steam id.</param>
         /// <param name="url">When using a different URL, you should indicate it (for example, if the creator of your server created the URL so as not to cause a bunch of requests to terraria-server.com)</param>
         /// <returns>A list of your server's votes.</returns>
         public static async Task<VotesList> GetVotesListAsync(string key, 
